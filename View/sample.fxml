@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500.0" minWidth="900.0" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Controller">
    <children>
       <VBox alignment="CENTER" prefHeight="500.0" prefWidth="900.0">
          <children>
@@ -18,13 +21,11 @@
                <font>
                   <Font size="24.0" />
                </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
             </Label>
-            <HBox prefHeight="50.0" prefWidth="300.0">
-               <children>
-                  <Button fx:id="createButton" layoutX="50.0" layoutY="50.0" mnemonicParsing="false" text="New Activity" />
-               </children>
-            </HBox>
-            <TableView prefHeight="200.0" prefWidth="200.0">
+            <TableView prefHeight="300.0" prefWidth="200.0">
               <columns>
                 <TableColumn minWidth="100.0" prefWidth="75.0" text="Activity" />
                 <TableColumn minWidth="100.0" prefWidth="75.0" text="Age Limit" />
@@ -33,7 +34,74 @@
                   <TableColumn minWidth="100.0" prefWidth="75.0" text="Duration" />
                   <TableColumn minWidth="100.0" prefWidth="75.0" text="Start Time" />
               </columns>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
             </TableView>
+            <VBox maxHeight="100.0" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox maxHeight="35.0" prefHeight="100.0" prefWidth="100.0">
+                     <children>
+                        <Label minWidth="110.0" text="Activity" />
+                        <Label minWidth="110.0" text="Age Limit" />
+                        <Label minWidth="110.0" text="Height Limit" />
+                        <Label minWidth="110.0" text="Description" />
+                        <Label minWidth="110.0" text="Duration" />
+                        <Label minWidth="110.0" text="Start Time" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TextField maxWidth="100.0" minWidth="100.0" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField minWidth="100.0" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField minWidth="100.0" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextArea minWidth="100.0" prefHeight="200.0" prefWidth="100.0">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </TextArea>
+                        <TextField minWidth="100.0" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <DatePicker minWidth="100.0" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </DatePicker>
+                        <Button mnemonicParsing="false" text="Clear">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="createButton" mnemonicParsing="false" text="Save">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
          </children>
       </VBox>
    </children>
