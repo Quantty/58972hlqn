@@ -29,4 +29,39 @@ public class Activities {
 
     }
 
+    public Activities() {
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAgeLimit() {
+        return ageLimit;
+    }
+
+    public double getHeightLimit() {
+        return heightLimit;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getReqEquipment() {
+        return reqEquipment;
+    }
+
+    public double getDuration() {
+        return duration;
+    }
+
+    public double getStartTime() {
+        return startTime;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
 }
